@@ -1,0 +1,125 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>For Alina</title>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Open+Sans&display=swap" rel="stylesheet"/>
+    <style>
+        body {
+            margin: 0;
+            background: linear-gradient(135deg, #ffdde1, #ee9ca7);
+            font-family: 'Open Sans', sans-serif;
+            color: #333;
+            text-align: center;
+            overflow-x: hidden;
+        }
+        h1 {
+            font-family: 'Great Vibes', cursive;
+            font-size: 3em;
+            margin-top: 20px;
+            color: #fff;
+            text-shadow: 2px 2px 4px #00000050;
+        }
+        p {
+            max-width: 800px;
+            margin: 20px auto;
+            font-size: 1.2em;
+            background-color: rgba(255, 255, 255, 0.85);
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            padding: 20px;
+        }
+        .gallery img {
+            width: 250px;
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+        }
+        audio {
+            margin-top: 30px;
+        }
+        footer {
+            margin-top: 50px;
+            font-size: 0.9em;
+            color: #fff;
+            text-shadow: 1px 1px 2px #00000050;
+        }
+        .hearts {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            pointer-events: none;
+            z-index: 10;
+        }
+        .hearts span {
+            position: absolute;
+            display: block;
+            width: 20px;
+            height: 20px;
+            background: url('https://upload.wikimedia.org/wikipedia/commons/2/20/Heart_symbol_red.svg') no-repeat center;
+            background-size: contain;
+            animation: float 6s linear infinite;
+        }
+        @keyframes float {
+            0% { transform: translateY(0) rotate(0deg); opacity: 1; }
+            100% { transform: translateY(-800px) rotate(360deg); opacity: 0; }
+        }
+    </style>
+</head>
+<body>
+    <h1>For My Beautiful Alina</h1>
+    <p>
+        Alina,<br><br>
+        I made a mistake — one that’s left me aching with regret.<br>
+        You deserve honesty, and I failed you. But you also deserve love — and mine for you is deep, real, and endless.<br><br>
+        I miss your laugh, your eyes, your voice. I miss <em>us</em>.<br><br>
+        I think about all the little things: our dates, the way you hold my hand, the way time stops when you smile at me.<br>
+        I love those moments — <strong>I love you</strong>.<br><br>
+        I know I hurt you. I’m so sorry. And I know I can’t take back what I did, but I’ll spend every day proving I can be better — for you, for us.<br><br>
+        I can’t lose you, Alina. You’re everything to me. I see a future with you.<br>
+        We’ll get through this. And one day, we’ll look back at this as something that made us stronger — because I believe with all my heart that we’ll get married, build a life, and grow old together.<br><br>
+        Please forgive me.<br>
+        I love you always.
+    </p>
+
+    <div class="gallery">
+        <img src="IMG_20241217_140350_218.webp" alt="Photo 1">
+        <img src="IMG_20250301_000804_814.jpg" alt="Photo 2">
+        <img src="IMG_20250411_101639_637.webp" alt="Photo 3">
+    </div>
+
+    <audio controls>
+        <source src="back_to_friends.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <div class="hearts"></div>
+
+    <footer>
+        Forever yours,<br>
+        The one who loves you endlessly
+    </footer>
+
+    <script>
+        const heartsContainer = document.querySelector('.hearts');
+        setInterval(() => {
+            const heart = document.createElement('span');
+            heart.style.left = Math.random() * 100 + 'vw';
+            heart.style.animationDuration = (Math.random() * 3 + 3) + 's';
+            heartsContainer.appendChild(heart);
+            setTimeout(() => heart.remove(), 6000);
+        }, 300);
+    </script>
+</body>
+</html>
